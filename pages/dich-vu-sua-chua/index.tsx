@@ -102,7 +102,7 @@ export default function ServicesPage() {
         {/* CTA nhóm */}
         <div className="flex flex-wrap gap-3 mb-10">
           <Button asChild size="sm">
-            <a href="/dat-lich-sua-chua">Đặt lịch sửa chữa ngay</a>
+            <a href="/lien-he">Liên hệ sửa chữa ngay</a>
           </Button>
           <Button asChild size="sm" variant="outline">
             <a href="/lien-he">Tư vấn dịch vụ</a>
@@ -151,7 +151,7 @@ export default function ServicesPage() {
                   </p>
                   <Button asChild size="sm" variant="outline">
                     <a href={`/dat-lich-sua-chua?service=${service.id}`}>
-                      Đặt lịch
+                      Liên hệ ngay
                     </a>
                   </Button>
                 </div>
@@ -175,7 +175,7 @@ export default function ServicesPage() {
               <a href="/lien-he">Gửi mô tả tình trạng xe</a>
             </Button>
             <Button asChild size="sm" variant="outline">
-              <a href="tel:0909xxxxxx">Gọi hotline 0909 xxx xxx</a>
+              <a href="tel:0909xxxxxx">Gọi hotline 0973 874 677</a>
             </Button>
           </div>
         </div>

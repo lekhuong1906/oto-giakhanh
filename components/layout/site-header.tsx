@@ -24,9 +24,9 @@ export default function SiteHeader() {
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
-          <Link href="/san-pham" className="hover:text-red-600">
+          {/* <Link href="/san-pham" className="hover:text-red-600">
             Sản phẩm
-          </Link>
+          </Link> */}
           <Link href="/dich-vu-sua-chua" className="hover:text-red-600">
             Dịch vụ sửa chữa
           </Link>

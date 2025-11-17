@@ -102,7 +102,7 @@ export default function AboutPage() {
 
             <p className="text-sm text-gray-700">
               Nếu bạn cần tư vấn thêm, hãy liên hệ qua{" "}
-              <span className="font-medium">hotline 0909 xxx xxx</span> hoặc gửi
+              <span className="font-medium">hotline 0973 874 677</span> hoặc gửi
               yêu cầu tại trang{" "}
               <a
                 href="/lien-he"
