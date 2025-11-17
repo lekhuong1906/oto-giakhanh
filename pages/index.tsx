@@ -38,9 +38,9 @@ export default function HomePage() {
                   Đặt lịch sửa chữa
                 </a>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-gray-500 text-white">
+              {/* <Button asChild variant="outline" size="lg" className="border-gray-500 text-white">
                 <a href="/san-pham">Xem phụ tùng</a>
-              </Button>
+              </Button> */}
             </div>
           </div>
 
