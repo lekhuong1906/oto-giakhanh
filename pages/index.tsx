@@ -1,16 +1,17 @@
 // pages/index.tsx
 import Head from "next/head"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import ServicesSlider from "@/components/home/services-slider"
-import SerViceSlideShow from "@/components/home/services-slide-show"
-import ActivityCarousel from "@/components/home/activity-carousel"
+import ServicesSlider from "@/components/home/ServicesSlider"
+import SerViceSlideShow from "@/components/home/ServicesSlideShow"
+import ActivityCarousel from "@/components/home/ActivityCarousel"
 import { Wrench } from "lucide-react"
 
 export default function HomePage() {
   return (
     <>
       <Head>
-        <title>Phụ Tùng & Dịch Vụ Ô Tô | AutoParts Garage</title>
+        <title>Phụ Tùng & Dịch Vụ Ô Tô | Ô Tô Gia Khánh</title>
         <meta
           name="description"
           content="Chuyên phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa uy tín."
@@ -33,7 +34,7 @@ export default function HomePage() {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg">
-                <a href="/dat-lich-sua-chua">
+                <a href="/lien-he">
                   <Wrench className="h-4 w-4 mr-2" />
                   Đặt lịch sửa chữa
                 </a>
@@ -44,8 +45,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <div className="h-64 rounded-2xl bg-gradient-to-br from-red-600 via-gray-800 to-black shadow-xl flex items-center justify-center">
+          <div>
+            <div className="h-48 md:h-64 rounded-2xl bg-gradient-to-br from-red-600 via-gray-800 to-black shadow-xl flex items-center justify-center">
               <span className="text-gray-100 text-sm">
                 (Khu vực hình ảnh garage / xe ô tô)
               </span>

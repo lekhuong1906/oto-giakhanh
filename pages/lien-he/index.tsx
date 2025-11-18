@@ -10,7 +10,7 @@ export default function ContactPage() {
         <title>Liên Hệ | Công Ty TNHH Công Nghệ Ô Tô Gia Khánh</title>
         <meta
           name="description"
-          content="Liên hệ Gia Khánh Garage để được tư vấn phụ tùng, phụ kiện và dịch vụ sửa chữa ô tô."
+          content="Liên hệ Ô Tô Gia Khánh để được tư vấn phụ tùng, phụ kiện và dịch vụ sửa chữa ô tô."
         />
       </Head>
 
@@ -156,14 +156,14 @@ export default function ContactPage() {
               Bản đồ chỉ đường
             </h2>
             <p className="text-xs md:text-sm text-gray-600">
-              Bạn có thể tìm kiếm &quot;Gia Khánh Garage&quot; trên Google Maps
+              Bạn có thể tìm kiếm &quot;Ô Tô Gia Khánh&quot; trên Google Maps
               hoặc sử dụng bản đồ bên dưới để dẫn đường đến garage.
             </p>
 
             <div className="rounded-2xl overflow-hidden border shadow-sm h-72 md:h-full min-h-[280px]">
               {/* Replace src bên dưới bằng link embed Google Maps vị trí thực của bạn */}
               <iframe
-                title="Bản đồ đường đi tới AutoParts Garage"
+                title="Bản đồ đường đi tới Ô Tô Gia Khánh"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.6356593043876!2d106.78103637587028!3d10.841132857936461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527dc64b9c1b9%3A0x6fa8002b33cd807!2zQ8O0bmcgdmnDqm4gQ2FvIMSR4buTbiBUaMO0bmcgVMOibiBWaeG7h3Q!5e0!3m2!1svi!2svi!4v1700000000000!5m2!1svi!2svi"
                 width="100%"
                 height="100%"

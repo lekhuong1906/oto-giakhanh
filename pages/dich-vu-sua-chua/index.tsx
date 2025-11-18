@@ -75,10 +75,10 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Dịch Vụ Sửa Chữa & Bảo Dưỡng Ô Tô | AutoParts Garage</title>
+        <title>Dịch Vụ Sửa Chữa & Bảo Dưỡng Ô Tô | Ô Tô Gia Khánh</title>
         <meta
           name="description"
-          content="Danh sách dịch vụ sửa chữa, bảo dưỡng, độ xe và chăm sóc ô tô tại AutoParts Garage."
+          content="Danh sách dịch vụ sửa chữa, bảo dưỡng, độ xe và chăm sóc ô tô tại Ô Tô Gia Khánh."
         />
       </Head>
 
@@ -86,7 +86,7 @@ export default function ServicesPage() {
         {/* Header page */}
         <div className="mb-8">
           <p className="text-xs uppercase tracking-wide text-red-500 mb-2">
-            Dịch vụ tại AutoParts Garage
+            Dịch vụ tại Ô Tô Gia Khánh
           </p>
           <h1 className="text-2xl md:text-3xl font-semibold mb-3">
             Dịch vụ sửa chữa & chăm sóc ô tô

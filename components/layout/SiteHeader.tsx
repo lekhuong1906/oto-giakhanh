@@ -14,7 +14,7 @@ export default function SiteHeader() {
           </div>
           <div className="flex flex-col leading-tight">
             <span className="font-bold text-sm md:text-base">
-              Gia Khánh Garage
+              Ô Tô Gia Khánh
             </span>
             <span className="text-xs text-gray-500 md:block hidden">
               Phụ tùng & Dịch vụ ô tô

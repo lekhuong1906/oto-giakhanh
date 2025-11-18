@@ -39,7 +39,7 @@ export default function ActivityCarousel() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl md:text-2xl font-semibold">
-            Hoạt động tại AutoParts Garage
+            Hoạt động tại Ô Tô Gia Khánh
           </h2>
 
           <div className="hidden md:flex gap-2">

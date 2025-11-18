@@ -1,6 +1,6 @@
 // pages/_app.tsx
 import "@/styles/globals.css"
-import MainLayout from "@/components/layout/main-layout"
+import MainLayout from "@/components/layout/MainLayout"
 import { AppProps } from "next/app"
 
 function MyApp({ Component, pageProps } : AppProps) {

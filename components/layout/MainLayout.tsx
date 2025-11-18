@@ -5,8 +5,8 @@ interface MainLayoutProps {
   children: ReactNode
 }
 
-import SiteHeader from "./site-header"
-import SiteFooter from "./site-footer"
+import SiteHeader from "./SiteHeader"
+import SiteFooter from "./SiteFooter"
 
 export default function MainLayout({ children } : MainLayoutProps) {
   return (

@@ -20,7 +20,7 @@ export default function Seo({
   url,
   ogImage,
 }: SeoProps) {
-  const fullTitle = title ? `${title} | AutoParts Garage` : DEFAULT_TITLE
+  const fullTitle = title ? `${title} | Ô Tô Gia Khánh` : DEFAULT_TITLE
   const metaDescription = description || DEFAULT_DESCRIPTION
   const canonical = url ? `${BASE_URL}${url}` : BASE_URL
   const image = ogImage || DEFAULT_OG_IMAGE

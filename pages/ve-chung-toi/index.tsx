@@ -6,19 +6,19 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>Về Chúng Tôi | AutoParts Garage</title>
+        <title>Về Chúng Tôi | Ô Tô Gia Khánh</title>
         <meta
           name="description"
-          content="Giới thiệu về AutoParts Garage - phụ tùng, phụ kiện ô tô và dịch vụ sửa chữa uy tín."
+          content="Giới thiệu về Ô Tô Gia Khánh - phụ tùng, phụ kiện ô tô và dịch vụ sửa chữa uy tín."
         />
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         <h1 className="text-2xl md:text-3xl font-semibold mb-3">
-          Về AutoParts Garage
+          Về Ô Tô Gia Khánh
         </h1>
         <p className="text-gray-600 mb-6 text-sm md:text-base">
-          AutoParts Garage được thành lập với mục tiêu mang đến cho khách hàng
+          Ô Tô Gia Khánh được thành lập với mục tiêu mang đến cho khách hàng
           những giải pháp toàn diện về phụ tùng, phụ kiện và dịch vụ sửa chữa
           ô tô. Chúng tôi luôn đặt{" "}
           <span className="font-medium">chất lượng – uy tín – minh bạch</span>{" "}
