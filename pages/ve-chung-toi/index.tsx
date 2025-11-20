@@ -14,7 +14,7 @@ export default function AboutPage() {
       </Head>
 
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
-        <h1 className="text-2xl md:text-3xl font-semibold mb-3">
+        <h1 className="text-2xl md:text-3xl text-red-700 font-semibold mb-3">
           Về Ô Tô Gia Khánh
         </h1>
         <p className="text-gray-600 mb-6 text-sm md:text-base">
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
         {/* 3 điểm mạnh */}
         <div className="grid gap-5 md:grid-cols-3 mb-10">
-          <div className="border rounded-xl p-4 md:p-5 shadow-sm">
+          <div className="border rounded-xl p-4 md:p-5 shadow-sm hover:bg-yellow-400">
             <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <Wrench className="h-4 w-4" />
             </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="border rounded-xl p-4 md:p-5 shadow-sm">
+          <div className="border rounded-xl p-4 md:p-5 shadow-sm hover:bg-yellow-400">
             <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <ShieldCheck className="h-4 w-4" />
             </div>
@@ -53,7 +53,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="border rounded-xl p-4 md:p-5 shadow-sm">
+          <div className="border rounded-xl p-4 md:p-5 shadow-sm hover:bg-yellow-400">
             <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <Clock className="h-4 w-4" />
             </div>
@@ -70,13 +70,13 @@ export default function AboutPage() {
         {/* Nội dung chi tiết */}
         <div className="grid gap-8 md:grid-cols-2">
           <div>
-            <h2 className="font-semibold text-lg mb-2">Sứ mệnh</h2>
+            <h2 className="font-semibold text-lg text-yellow-700 mb-2">Sứ mệnh</h2>
             <p className="text-sm text-gray-700 mb-3">
               Mang đến trải nghiệm dịch vụ tốt như hãng nhưng chi phí hợp lý
               hơn, giúp khách hàng yên tâm khi sử dụng ô tô mỗi ngày.
             </p>
 
-            <h2 className="font-semibold text-lg mb-2">Giá trị cốt lõi</h2>
+            <h2 className="font-semibold text-lg text-yellow-700 mb-2">Giá trị cốt lõi</h2>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>• Trung thực trong tư vấn và báo giá</li>
               <li>• Tận tâm trong từng hạng mục sửa chữa</li>
@@ -85,13 +85,13 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="font-semibold text-lg mb-2">Cơ sở vật chất</h2>
+            <h2 className="font-semibold text-lg text-yellow-700 mb-2">Cơ sở vật chất</h2>
             <p className="text-sm text-gray-700 mb-3">
               Garage được trang bị cầu nâng, máy chẩn đoán, máy nén khí, máy cân
               chỉnh… đầy đủ để phục vụ nhiều dòng xe từ phổ thông đến cao cấp.
             </p>
 
-            <h2 className="font-semibold text-lg mb-2">
+            <h2 className="font-semibold text-lg text-yellow-700 mb-2">
               Cam kết với khách hàng
             </h2>
             <ul className="text-sm text-gray-700 space-y-1 mb-3">

@@ -150,7 +150,7 @@ export default function ServicesPage() {
                     </span>
                   </p>
                   <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
-                    <a href={`/dat-lich-sua-chua?service=${service.id}`}>
+                    <a href={`/lien-he`}>
                       Liên hệ ngay
                     </a>
                   </Button>
