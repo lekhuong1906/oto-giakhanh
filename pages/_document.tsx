@@ -30,6 +30,11 @@ export default function Document() {
                     content="phu tung o to, phu kien o to, gara o to, sua chua o to, bao duong o to, do xe, do noi that"
                 />
                 <meta name="theme-color" content="#111827" />
+                {/** Google search console */}
+                <meta
+                    name="google-site-verification"
+                    content="Lc4O01Utd4G9Khcn_orDOP0F7wDKyNIBffiK4pcPspk"
+                />
             </Head>
             <body>
                 <Main />
