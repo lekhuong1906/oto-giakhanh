@@ -20,7 +20,7 @@ export default function SiteHeader() {
               Ô Tô Gia Khánh
             </span>
             <span className="text-xs text-gray-700 md:block hidden">
-              Phụ tùng & Dịch vụ ô tô
+              Dịch vụ ô tô
             </span>
           </div>
         </Link>

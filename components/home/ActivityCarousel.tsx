@@ -43,7 +43,10 @@ export default function ActivityCarousel() {
     <section className="bg-white py-10 md:py-14">
       <div className="max-w-6xl mx-auto px-4">
         {/* header */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="text-center mb-6">
+          <p className="text-xs text-yellow-700 uppercase tracking-wide mb-1">
+            Hình ảnh thực tế
+          </p>
           <h2 className="text-xl text-red-700 md:text-2xl font-semibold">
             Hoạt động tại Ô Tô Gia Khánh
           </h2>

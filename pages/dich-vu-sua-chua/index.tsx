@@ -1,28 +1,41 @@
 // pages/dich-vu.tsx
 import Head from "next/head"
-import { Wrench, Sparkles, ThermometerSun, ShieldCheck, Car } from "lucide-react"
+import {
+  Wrench,
+  ShieldCheck,
+  ThermometerSun,
+  Sparkles,
+  Car,
+  Hammer,
+  Droplets,
+  AppWindow,
+  LifeBuoy,
+  SprayCan,
+} from "lucide-react";
 import { Button } from "@/components/ui/button"
 
-const services = [
+export const services = [
   {
-    id: "bao-duong-dinh-ky",
+    id: 1,
+    slug: "bao-duong-dinh-ky",
     title: "Bảo dưỡng định kỳ",
     icon: Wrench,
     short:
-      "Thay dầu, kiểm tra tổng thể giúp xe vận hành ổn định, tăng tuổi thọ động cơ.",
+      "Thay dầu, kiểm tra tổng thể giúp xe vận hành ổn định và tăng tuổi thọ động cơ.",
     details: [
       "Thay dầu nhớt, lọc dầu, lọc gió động cơ",
-      "Kiểm tra phanh, lốp, hệ thống lái",
+      "Kiểm tra phanh, lốp, hệ thống lái và treo",
       "Kiểm tra ắc quy, nước làm mát, dung dịch",
     ],
     estTime: "2–4 giờ",
   },
   {
-    id: "sua-chua-may-gam",
+    id: 2,
+    slug: "sua-chua-may-gam",
     title: "Sửa chữa máy – gầm",
     icon: ShieldCheck,
     short:
-      "Xử lý các vấn đề về động cơ, hộp số, gầm xe với máy chẩn đoán hiện đại.",
+      "Chẩn đoán và sửa chữa động cơ, hộp số, gầm xe với thiết bị hiện đại.",
     details: [
       "Đọc lỗi, kiểm tra bằng máy chuyên dụng",
       "Sửa chữa, đại tu động cơ – hộp số",
@@ -31,24 +44,26 @@ const services = [
     estTime: "Tùy mức độ",
   },
   {
-    id: "dien-dieu-hoa",
+    id: 3,
+    slug: "dien-dieu-hoa",
     title: "Điện – điều hòa – tiện ích",
     icon: ThermometerSun,
     short:
-      "Kiểm tra và sửa chữa hệ thống điện, điều hòa, các tính năng tiện nghi trên xe.",
+      "Kiểm tra và sửa chữa hệ thống điện, điều hòa và các tiện ích trên xe.",
     details: [
       "Sửa điều hòa không mát, có mùi, chảy nước",
       "Xử lý đèn, kính, gương, khóa điện",
-      "Lắp đặt, sửa các thiết bị điện tử",
+      "Lắp đặt, sửa các thiết bị điện tử, màn hình, camera",
     ],
     estTime: "2–6 giờ",
   },
   {
-    id: "do-xe-nang-cap",
+    id: 4,
+    slug: "do-xe-nang-cap",
     title: "Độ xe – nâng cấp phụ kiện",
     icon: Sparkles,
     short:
-      "Độ ngoại thất, nội thất, ánh sáng, âm thanh, bảo vệ xe theo phong cách riêng.",
+      "Độ ngoại thất, nội thất, ánh sáng và phụ kiện theo phong cách riêng.",
     details: [
       "Độ đèn bi, LED, bodykit, mâm lốp",
       "Dán film cách nhiệt, phủ ceramic, phủ gầm",
@@ -57,19 +72,104 @@ const services = [
     estTime: "Theo gói độ",
   },
   {
-    id: "kiem-tra-truoc-khi-mua",
+    id: 5,
+    slug: "kiem-tra-truoc-khi-mua",
     title: "Kiểm tra xe trước khi mua",
     icon: Car,
     short:
-      "Kiểm tra tổng thể xe cũ trước khi quyết định mua – hạn chế rủi ro, xe tai nạn.",
+      "Đánh giá xe cũ toàn diện trước khi mua – tránh xe lỗi, tai nạn, thủy kích.",
     details: [
-      "Kiểm tra khung gầm, tai nạn, thủy kích",
+      "Kiểm tra khung gầm, dấu hiệu tai nạn, đâm đụng",
       "Đánh giá động cơ, hộp số, hệ thống điện",
-      "Tư vấn tổng quan tình trạng xe",
+      "Tư vấn tình trạng tổng thể, báo cáo chi tiết",
     ],
     estTime: "1.5–3 giờ",
   },
-]
+  {
+    id: 6,
+    slug: "dong-son-xe",
+    title: "Đồng – sơn xe",
+    icon: Hammer,
+    short:
+      "Xử lý trầy xước, móp méo, va quẹt và sơn dặm – sơn full xe công nghệ cao.",
+    details: [
+      "Sửa móp vè, cản, nắn khung",
+      "Sơn dặm – phục hồi chuẩn màu 100%",
+      "Sơn full xe công nghệ phòng sơn khép kín",
+    ],
+    estTime: "1–3 ngày",
+  },
+  {
+    id: 7,
+    slug: "son-cong-nghe-cao",
+    title: "Sơn ô tô công nghệ cao",
+    icon: SprayCan,
+    short:
+      "Phòng sơn tiêu chuẩn, phối màu chính xác, bề mặt bóng đẹp và bền màu lâu dài.",
+    details: [
+      "Phối màu chuẩn theo mã nhà sản xuất",
+      "Sơn công nghệ cao – hạn chế bụi sơn",
+      "Bảo hành màu sơn dài hạn",
+    ],
+    estTime: "1–3 ngày",
+  },
+  {
+    id: 8,
+    slug: "thay-kinh-o-to",
+    title: "Thay kính – xử lý kính vỡ",
+    icon: AppWindow,
+    short:
+      "Thay kính trước – sau – kính sườn, xử lý nứt vỡ an toàn theo tiêu chuẩn.",
+    details: [
+      "Thay kính trước/sau chính hãng",
+      "Xử lý nứt nhỏ – khoan chống nứt",
+      "Hiệu chỉnh cảm biến mưa/lane sau khi thay",
+    ],
+    estTime: "1–2 giờ",
+  },
+  {
+    id: 9,
+    slug: "ngap-nuoc-thuy-kich",
+    title: "Khắc phục ngập nước – thủy kích",
+    icon: Droplets,
+    short:
+      "Xử lý xe ngập nước, thủy kích – cứu hộ và phục hồi động cơ an toàn.",
+    details: [
+      "Kiểm tra và xử lý phần điện – ECU",
+      "Vệ sinh bướm ga, lọc gió, thay dầu",
+      "Phục hồi động cơ sau thủy kích",
+    ],
+    estTime: "Tùy tình trạng",
+  },
+  {
+    id: 10,
+    slug: "bao-hiem-o-to",
+    title: "Làm bảo hiểm ô tô",
+    icon: ShieldCheck,
+    short:
+      "Hỗ trợ toàn bộ hồ sơ bảo hiểm, sửa chữa đúng quy trình, không thu tiền vụ.",
+    details: [
+      "Tiếp nhận xe và hỗ trợ hồ sơ bảo hiểm",
+      "Giám định, làm việc với hãng bảo hiểm",
+      "Sửa chữa – thay thế phụ tùng đúng tiêu chuẩn",
+    ],
+    estTime: "1–5 ngày",
+  },
+  {
+    id: 11,
+    slug: "cuu-ho-24-7",
+    title: "Cứu hộ 24/7",
+    icon: LifeBuoy,
+    short:
+      "Hỗ trợ tận nơi mọi lúc – xử lý sự cố nhanh: tai nạn, chết máy, ngập nước.",
+    details: [
+      "Cứu hộ xe chết máy, sự cố bất ngờ",
+      "Hỗ trợ tai nạn – va quẹt – kẹt bánh",
+      "Vận chuyển xe về gara an toàn",
+    ],
+    estTime: "Tùy vị trí",
+  },
+];
 
 export default function ServicesPage() {
   return (
@@ -89,7 +189,7 @@ export default function ServicesPage() {
             Dịch vụ tại Ô Tô Gia Khánh
           </p>
           <h1 className="text-2xl md:text-3xl text-red-700 font-semibold mb-3">
-            Dịch vụ sửa chữa & chăm sóc ô tô
+            Dịch vụ sửa chữa & Chăm sóc ô tô
           </h1>
           <p className="text-sm md:text-base text-gray-600 max-w-3xl">
             Chúng tôi cung cấp đa dạng dịch vụ từ bảo dưỡng định kỳ, sửa chữa
@@ -116,7 +216,6 @@ export default function ServicesPage() {
             return (
               <section
                 key={service.id}
-                id={service.id}
                 className="border rounded-2xl p-5 md:p-6 shadow-sm bg-white hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start gap-3 mb-3">
@@ -150,8 +249,8 @@ export default function ServicesPage() {
                     </span>
                   </p>
                   <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
-                    <a href={`/lien-he`}>
-                      Liên hệ ngay
+                    <a href={`/dich-vu-sua-chua/${service.slug}`}>
+                      Chi tiết
                     </a>
                   </Button>
                 </div>

@@ -7,6 +7,11 @@ import {
   ThermometerSun,
   ShieldCheck,
   Car,
+  Hammer,
+  Brush,
+  AppWindow,
+  Droplets,
+  Cog
 } from "lucide-react"
 import {
   Carousel,
@@ -21,38 +26,50 @@ import Autoplay from "embla-carousel-autoplay"
 const services = [
   {
     id: 1,
-    title: "CỨU HỘ Ô TÔ 24/7",
-    desc: "Hỗ trợ cứu hộ khi xe gặp sự cố, chết máy, nổ lốp,...",
-    icon: Car,
+    title: "Sơn ô tô công nghệ cao",
+    desc: "Sơn phối màu chuẩn hãng, sơn dặm – sơn full xe, công nghệ phòng sơn hiện đại, bảo hành màu sơn lâu dài.",
+    icon: Brush,
   },
   {
     id: 2,
-    title: "SỬA XE LƯU ĐỘNG – TẠI CHỖ",
-    desc: "Kỹ thuật viên đến tận nơi kiểm tra & xử lý lỗi cơ bản.",
-    icon: ShieldCheck,
+    title: "Đồng – Sơn – Sửa va quẹt",
+    desc: "Xử lý va quẹt, trầy xước, móp méo thân vỏHỗ trợ cứu hộ khi xe gặp sự cố, chết máy, nổ lốp,...",
+    icon: Hammer,
   },
   {
     id: 3,
-    title: "BẢO DƯỠNG ĐỊNH KỲ",
-    desc: "Thay dầu, lọc, kiểm tra hệ thống phanh, lốp,...",
+    title: "Sửa chữa điện – máy",
+    desc: "Kiểm tra – sửa chữa hệ thống điện thân xe, điện lạnh, động cơ, ECU,...",
     icon: Wrench,
   },
   {
     id: 4,
-    title: "ĐIỆN – ĐIỀU HÒA",
-    desc: "Sửa điều hòa không mát, vệ sinh dàn lạnh, kiểm tra điện,...",
-    icon: ThermometerSun,
+    title: "Thay kính – Sửa kính vỡ",
+    desc: "Thay kính trước/sau, kính sườn, xử lý nứt – vỡ kính an toàn theo tiêu chuẩn kỹ thuật.",
+    icon: AppWindow,
   },
   {
     id: 5,
-    title: "LÀM ĐỒNG – PHỤ KIỆN",
-    desc: "Độ đèn, bodykit, âm thanh, dán film,...",
-    icon: Sparkles,
+    title: "Khắc phục xe ngập nước – thủy kích",
+    desc: "Xử lý xe ngập nước, thủy kích, phục hồi động cơ, kiểm tra điện – ECU – lọc gió – dầu máy.",
+    icon: Droplets,
   },
   {
     id: 6,
-    title: "ĐỘ XE – PHỤ KIỆN",
-    desc: "Độ đèn, bodykit, âm thanh, dán film,...",
+    title: "Làm bảo hiểm ô tô",
+    desc: "Hỗ trợ toàn bộ hồ sơ bảo hiểm, giám định – sửa chữa từ A–Z, không thu tiền vụ, thay thế phụ tùng chính hãng.",
+    icon: ShieldCheck,
+  },
+  {
+    id: 7,
+    title: "Bảo dưỡng định kỳ",
+    desc: "Thay dầu, lọc dầu, kiểm tra phanh – máy – điện, vệ sinh khoang máy & gầm toàn diện.",
+    icon: Cog,
+  },
+  {
+    id: 9,
+    title: "Chăm sóc – Làm đẹp xe",
+    desc: "Đánh bóng, phủ ceramic, rửa xe detailing, dọn nội thất, khử mùi, phục hồi sơn.",
     icon: Sparkles,
   },
 ]
@@ -79,9 +96,12 @@ export default function ServicesSlideShow() {
     <section className="py-10 md:py-14">
       <div className="max-w-6xl mx-auto px-4">
         {/* header */}
-        <div className="flex justify-between items-center mb-6 text-red-700">
+        <div className="mb-6 text-center text-red-700">
+          <p className="text-xs text-yellow-700 uppercase tracking-wide mb-1">
+            Dịch vụ sửa chữa
+          </p>
           <h2 className="text-xl md:text-2xl font-semibold">
-            Các dịch vụ bên garage
+            Dịch vụ nổi bật tại Ô Tô Gia Khánh
           </h2>
         </div>
 
@@ -121,9 +141,8 @@ export default function ServicesSlideShow() {
           {Array.from({ length: count }, (_, i) => (
             <button
               key={i}
-              className={`w-2 h-2 rounded-full transition-colors ${
-                i === current - 1 ? "bg-primary" : "bg-gray-300"
-              }`}
+              className={`w-2 h-2 rounded-full transition-colors ${i === current - 1 ? "bg-primary" : "bg-gray-300"
+                }`}
               onClick={() => api?.scrollTo(i)}
               aria-label={`Go to slide ${i + 1}`}
             />
