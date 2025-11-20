@@ -31,6 +31,7 @@ export default function Document() {
                 />
                 <meta name="theme-color" content="#111827" />
                 {/** Google search console */}
+                <meta name="robots" content="index, follow" />
                 <meta
                     name="google-site-verification"
                     content="Lc4O01Utd4G9Khcn_orDOP0F7wDKyNIBffiK4pcPspk"
