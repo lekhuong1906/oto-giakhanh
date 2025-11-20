@@ -85,10 +85,10 @@ export default function ServicesPage() {
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         {/* Header page */}
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-wide text-red-500 mb-2">
+          <p className="text-xs uppercase tracking-wide text-yellow-700 mb-2">
             Dịch vụ tại Ô Tô Gia Khánh
           </p>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-3">
+          <h1 className="text-2xl md:text-3xl text-red-700 font-semibold mb-3">
             Dịch vụ sửa chữa & chăm sóc ô tô
           </h1>
           <p className="text-sm md:text-base text-gray-600 max-w-3xl">
@@ -101,10 +101,10 @@ export default function ServicesPage() {
 
         {/* CTA nhóm */}
         <div className="flex flex-wrap gap-3 mb-10">
-          <Button asChild size="sm">
+          <Button asChild size="sm" className="bg-red-700 hover:bg-red-800">
             <a href="/lien-he">Liên hệ sửa chữa ngay</a>
           </Button>
-          <Button asChild size="sm" variant="outline">
+          <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
             <a href="/lien-he">Tư vấn dịch vụ</a>
           </Button>
         </div>
@@ -120,7 +120,7 @@ export default function ServicesPage() {
                 className="border rounded-2xl p-5 md:p-6 shadow-sm bg-white hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="h-9 w-9 rounded-full bg-red-600 text-white flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center flex-shrink-0">
                     <Icon className="h-4 w-4" />
                   </div>
                   <div>
@@ -136,7 +136,7 @@ export default function ServicesPage() {
                 <ul className="text-xs md:text-sm text-gray-700 space-y-1.5 mb-4">
                   {service.details.map((item, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-red-500 flex-shrink-0" />
+                      <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-red-700 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -149,7 +149,7 @@ export default function ServicesPage() {
                       {service.estTime}
                     </span>
                   </p>
-                  <Button asChild size="sm" variant="outline">
+                  <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
                     <a href={`/dat-lich-sua-chua?service=${service.id}`}>
                       Liên hệ ngay
                     </a>
@@ -171,10 +171,10 @@ export default function ServicesPage() {
             lượng chi phí cho bạn.
           </p>
           <div className="flex flex-wrap gap-3">
-            <Button asChild size="sm">
+            <Button asChild size="sm" className="bg-red-700">
               <a href="/lien-he">Gửi mô tả tình trạng xe</a>
             </Button>
-            <Button asChild size="sm" variant="outline">
+            <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
               <a href="tel:0909xxxxxx">Gọi hotline 0973 874 677</a>
             </Button>
           </div>

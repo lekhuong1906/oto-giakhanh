@@ -17,10 +17,10 @@ export default function ContactPage() {
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         {/* Tiêu đề trang */}
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-wide text-red-500 mb-2">
+          <p className="text-xs uppercase tracking-wide text-yellow-700 mb-2">
             Liên hệ
           </p>
-          <h1 className="text-2xl md:text-3xl font-semibold mb-3">
+          <h1 className="text-2xl md:text-3xl text-red-700 font-semibold mb-3">
             Kết nối với Công Ty TNHH Công Nghệ Ô Tô Gia Khánh
           </h1>
           <p className="text-sm md:text-base text-gray-600 max-w-3xl">
@@ -83,10 +83,10 @@ export default function ContactPage() {
               </div>
 
               <div className="mt-5 flex flex-wrap gap-3">
-                <Button asChild size="sm">
+                <Button asChild size="sm" className="bg-red-700 hover:bg-red-800">
                   <a href="tel:0909xxxxxx">Gọi ngay</a>
                 </Button>
-                <Button asChild size="sm" variant="outline">
+                <Button asChild size="sm" variant="outline" className="hover:bg-yellow-400">
                   <a href="/dat-lich-sua-chua">Đặt lịch sửa chữa</a>
                 </Button>
               </div>
@@ -152,7 +152,7 @@ export default function ContactPage() {
 
           {/* Khối map */}
           <div className="space-y-4">
-            <h2 className="font-semibold text-base md:text-lg">
+            <h2 className="font-semibold text-base md:text-lg text-red-700">
               Bản đồ chỉ đường
             </h2>
             <p className="text-xs md:text-sm text-gray-600">

@@ -2,7 +2,15 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const items = [
   { id: 1, src: "/images/activity/anh-1.webp", alt: "Garage 1" },
@@ -13,82 +21,75 @@ const items = [
   { id: 6, src: "/images/activity/anh-6.webp", alt: "Training 2" },
 ]
 
-const ITEMS_PER_PAGE = 3
-const AUTOPLAY_MS = 3200
-
 export default function ActivityCarousel() {
-  const [start, setStart] = useState(0)
-  const total = items.length
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-  const next = () => setStart((prev) => (prev + 1) % total)
-  const prev = () => setStart((prev) => (prev - 1 + total) % total)
-
-  // Auto chạy từng card
   useEffect(() => {
-    const id = setInterval(next, AUTOPLAY_MS)
-    return () => clearInterval(id)
-  }, [])
+    if (!api) return
 
-  const visible = Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => {
-    const index = (start + i) % total
-    return items[index]
-  })
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
+  const plugin = Autoplay({ delay: 3200, stopOnMouseEnter: true })
 
   return (
     <section className="bg-white py-10 md:py-14">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-xl md:text-2xl font-semibold">
+        {/* header */}
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="text-xl text-red-700 md:text-2xl font-semibold">
             Hoạt động tại Ô Tô Gia Khánh
           </h2>
-
-          <div className="hidden md:flex gap-2">
-            <button
-              onClick={prev}
-              className="h-9 w-9 rounded-full border flex items-center justify-center"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              onClick={next}
-              className="h-9 w-9 rounded-full border flex items-center justify-center"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
         </div>
 
-        {/* Desktop: 3 ảnh vuông */}
-        <div className="hidden md:grid grid-cols-3 gap-5">
-          {visible.map((item) => (
-            <div
-              key={item.id}
-              className="rounded-3xl overflow-hidden bg-gray-100 shadow-sm"
-            >
-              <div className="relative w-full aspect-square max-h-[450px]">
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[plugin]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {items.map((item) => (
+              <CarouselItem key={item.id} className="pl-2 md:pl-4 md:basis-1/3">
+                <div className="rounded-3xl overflow-hidden bg-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
+                  <div className="relative w-full aspect-square max-h-[450px]">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
+        </Carousel>
+
+        {/* Dots */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {Array.from({ length: count }, (_, i) => (
+            <button
+              key={i}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === current - 1 ? "bg-primary" : "bg-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
           ))}
-        </div>
-
-        {/* Mobile: 1 ảnh */}
-        <div className="md:hidden">
-          <div className="rounded-3xl overflow-hidden shadow-sm bg-gray-100 fade-in">
-            <div className="relative w-full aspect-square max-h-[450px]">
-              <Image
-                src={items[start].src}
-                alt={items[start].alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </section>

@@ -28,7 +28,7 @@ export default function AboutPage() {
         {/* 3 điểm mạnh */}
         <div className="grid gap-5 md:grid-cols-3 mb-10">
           <div className="border rounded-xl p-4 md:p-5 shadow-sm">
-            <div className="h-9 w-9 rounded-full bg-red-600 text-white flex items-center justify-center mb-3">
+            <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <Wrench className="h-4 w-4" />
             </div>
             <h2 className="font-semibold mb-1 text-sm md:text-base">
@@ -41,7 +41,7 @@ export default function AboutPage() {
           </div>
 
           <div className="border rounded-xl p-4 md:p-5 shadow-sm">
-            <div className="h-9 w-9 rounded-full bg-red-600 text-white flex items-center justify-center mb-3">
+            <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <ShieldCheck className="h-4 w-4" />
             </div>
             <h2 className="font-semibold mb-1 text-sm md:text-base">
@@ -54,7 +54,7 @@ export default function AboutPage() {
           </div>
 
           <div className="border rounded-xl p-4 md:p-5 shadow-sm">
-            <div className="h-9 w-9 rounded-full bg-red-600 text-white flex items-center justify-center mb-3">
+            <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center mb-3">
               <Clock className="h-4 w-4" />
             </div>
             <h2 className="font-semibold mb-1 text-sm md:text-base">

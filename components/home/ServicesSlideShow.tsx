@@ -7,15 +7,22 @@ import {
   ThermometerSun,
   ShieldCheck,
   Car,
-  ChevronLeft,
-  ChevronRight,
 } from "lucide-react"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  type CarouselApi,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 const services = [
   {
     id: 1,
     title: "CỨU HỘ Ô TÔ 24/7",
-    desc: "Hỗ trợ cứu hộ khi xe gặp sự cố, chết máy, nổ lốp, hết ắc quy,...",
+    desc: "Hỗ trợ cứu hộ khi xe gặp sự cố, chết máy, nổ lốp,...",
     icon: Car,
   },
   {
@@ -38,86 +45,89 @@ const services = [
   },
   {
     id: 5,
+    title: "LÀM ĐỒNG – PHỤ KIỆN",
+    desc: "Độ đèn, bodykit, âm thanh, dán film,...",
+    icon: Sparkles,
+  },
+  {
+    id: 6,
     title: "ĐỘ XE – PHỤ KIỆN",
     desc: "Độ đèn, bodykit, âm thanh, dán film,...",
     icon: Sparkles,
   },
 ]
 
-const ITEMS_PER_PAGE = 3
-const AUTOPLAY_MS = 3000
+export default function ServicesSlideShow() {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
 
-export default function ServicesSlider() {
-  const [start, setStart] = useState(0)
-
-  const handlePrev = () => {
-    setStart((prev) => (prev - 1 + services.length) % services.length)
-  }
-
-  const handleNext = () => {
-    setStart((prev) => (prev + 1) % services.length)
-  }
-
-  // Auto chạy từng card
   useEffect(() => {
-    const id = setInterval(() => {
-      setStart((prev) => (prev + 1) % services.length)
-    }, AUTOPLAY_MS)
-    return () => clearInterval(id)
-  }, [])
+    if (!api) return
 
-  // Create the visible array by rotating
-  const visible = Array.from({ length: ITEMS_PER_PAGE }).map((_, i) => {
-    const index = (start + i) % services.length
-    return services[index]
-  })
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
+  const plugin = Autoplay({ delay: 3000, stopOnMouseEnter: true })
 
   return (
-    <section className="bg-white py-10 md:py-14">
+    <section className="py-10 md:py-14">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="flex items-center justify-between mb-6">
+        {/* header */}
+        <div className="flex justify-between items-center mb-6 text-red-700">
           <h2 className="text-xl md:text-2xl font-semibold">
             Các dịch vụ bên garage
           </h2>
-
-          <div className="hidden md:flex gap-2">
-            <button
-              onClick={handlePrev}
-              className="h-9 w-9 rounded-full border flex items-center justify-center"
-            >
-              <ChevronLeft className="h-4 w-4" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="h-9 w-9 rounded-full border flex items-center justify-center"
-            >
-              <ChevronRight className="h-4 w-4" />
-            </button>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          {visible.map((service) => {
-            const Icon = service.icon
-            return (
-              <div
-                key={service.id}
-                className="rounded-3xl bg-gray-50 px-6 py-7 text-center shadow hover:shadow-md"
-              >
-                <div className="flex justify-center mb-4">
-                  <div className="h-16 w-16 rounded-full bg-white border flex items-center justify-center">
-                    <Icon className="h-7 w-7 text-blue-700" />
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[plugin]}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-2 md:-ml-4">
+            {services.map((service, index) => {
+              const Icon = service.icon
+              return (
+                <CarouselItem key={service.id} className="pl-2 md:pl-4 md:basis-1/3 ">
+                  <div className="rounded-3xl bg-gray-50 px-6 py-8 text-center shadow hover:shadow-md transition-shadow duration-300 hover:bg-yellow-400">
+                    <div className="h-14 w-14 mx-auto rounded-full border flex items-center justify-center mb-4 bg-white">
+                      <Icon className="h-6 w-6 text-red-700" />
+                    </div>
+                    <h3 className="font-bold text-primary mb-2 uppercase text-sm">
+                      {service.title}
+                    </h3>
+                    <p className="text-xs text-gray-600">{service.desc}</p>
                   </div>
-                </div>
+                </CarouselItem>
+              )
+            })}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex -left-12" />
+          <CarouselNext className="hidden md:flex -right-12" />
+        </Carousel>
 
-                <h3 className="text-sm font-bold text-blue-800 uppercase mb-3">
-                  {service.title}
-                </h3>
-
-                <p className="text-xs text-gray-700">{service.desc}</p>
-              </div>
-            )
-          })}
+        {/* Dots */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {Array.from({ length: count }, (_, i) => (
+            <button
+              key={i}
+              className={`w-2 h-2 rounded-full transition-colors ${
+                i === current - 1 ? "bg-primary" : "bg-gray-300"
+              }`}
+              onClick={() => api?.scrollTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>
