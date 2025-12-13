@@ -1,5 +1,5 @@
 // pages/index.tsx
-import Head from "next/head"
+import Seo from "@/components/seo/Seo"
 import SerViceSlideShow from "@/components/home/ServicesSlideShow"
 import ActivityCarousel from "@/components/home/ActivityCarousel"
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection"
@@ -66,13 +66,12 @@ export default function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>Phụ Tùng & Dịch Vụ Ô Tô | Ô Tô Gia Khánh</title>
-        <meta
-          name="description"
-          content="Chuyên phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa uy tín."
-        />
-      </Head>
+      <Seo
+        title="Phụ Tùng & Dịch Vụ Ô Tô"
+        description="Chuyên phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa uy tín tại Gia Lai. Top 10 gara uy tín - Đồng sơn, điện máy, bảo dưỡng, cứu hộ 24/7, làm bảo hiểm không thu tiền vụ."
+        url="/"
+        keywords="phụ tùng ô tô Gia Lai, gara ô tô uy tín, sửa chữa ô tô, đồng sơn ô tô, cứu hộ ô tô 24/7, bảo hiểm ô tô, bảo dưỡng ô tô, Top 10 gara Gia Lai"
+      />
 
       <HeroSection />
       <WhyChooseUsSection />

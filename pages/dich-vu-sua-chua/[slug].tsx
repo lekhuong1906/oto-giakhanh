@@ -1,7 +1,7 @@
-// pages/dich-vu/[slug].tsx
+// pages/dich-vu-sua-chua/[slug].tsx
 
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Head from "next/head";
+import Seo from "@/components/seo/Seo";
 import Link from "next/link";
 import { services, getServiceBySlug, Service } from "@/data/services";
 import { iconMap } from "@/data/icons";
@@ -13,21 +13,15 @@ type Props = {
 const ServiceDetailPage: NextPage<Props> = ({ service }) => {
     const Icon = iconMap[service.icon]; // Map icon string → React component
 
-    const pageUrl = `https://oto-giakhanh.vercel.app/dich-vu/${service.slug}`;
-
     return (
         <>
-            <Head>
-                <title>{service.seoTitle}</title>
-                <meta name="description" content={service.seoDescription} />
-
-                <meta property="og:title" content={service.seoTitle} />
-                <meta property="og:description" content={service.seoDescription} />
-                <meta property="og:url" content={pageUrl} />
-                <meta property="og:type" content="article" />
-
-                <link rel="canonical" href={pageUrl} />
-            </Head>
+            <Seo
+                title={service.seoTitle.replace(" | Ô Tô Gia Khánh", "").replace(" – ", " - ")}
+                description={service.seoDescription}
+                url={`/dich-vu-sua-chua/${service.slug}`}
+                keywords={`${service.title}, dịch vụ ${service.title.toLowerCase()}, ${service.title.toLowerCase()} tại Gia Lai, gara ${service.title.toLowerCase()}, Ô Tô Gia Khánh`}
+                ogType="article"
+            />
 
             <main className="max-w-5xl mx-auto px-4 py-10 space-y-12">
                 {/* BREADCRUMB */}

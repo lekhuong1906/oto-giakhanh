@@ -13,12 +13,47 @@ export default function Document() {
                     content="width=device-width, initial-scale=1"
                 />
 
-                {/* Thẻ link để gắn file SVG làm favicon */}
+                {/* Favicon - Multiple formats for better compatibility with Google */}
                 <link
                     rel="icon"
                     href="/icon.svg"
-                    type="image/svg+xml" // BẮT BUỘC: Chỉ định MIME type là SVG
+                    type="image/svg+xml"
                 />
+                <link
+                    rel="icon"
+                    href="/icon.svg"
+                    type="image/png"
+                    sizes="192x192"
+                />
+                <link
+                    rel="icon"
+                    href="/icon.svg"
+                    type="image/png"
+                    sizes="32x32"
+                />
+                <link
+                    rel="icon"
+                    href="/icon.svg"
+                    type="image/png"
+                    sizes="16x16"
+                />
+                <link
+                    rel="shortcut icon"
+                    href="/icon.svg"
+                />
+                <link
+                    rel="apple-touch-icon"
+                    href="/icon.svg"
+                    sizes="180x180"
+                />
+                {/* Site verification and branding */}
+                <meta name="application-name" content="Ô Tô Gia Khánh" />
+                <meta name="msapplication-TileColor" content="#EAB308" />
+                {/* Open Graph / Facebook */}
+                <meta property="og:type" content="website" />
+                <meta property="og:site_name" content="Ô Tô Gia Khánh" />
+                {/* Twitter */}
+                <meta name="twitter:card" content="summary_large_image" />
 
                 {/* Default SEO (có thể override bằng từng page) */}
                 <meta

@@ -1,18 +1,17 @@
 // pages/lien-he.tsx
-import Head from "next/head"
+import Seo from "@/components/seo/Seo"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function ContactPage() {
   return (
     <>
-      <Head>
-        <title>Liên Hệ | Công Ty TNHH Công Nghệ Ô Tô Gia Khánh</title>
-        <meta
-          name="description"
-          content="Liên hệ Ô Tô Gia Khánh để được tư vấn phụ tùng, phụ kiện và dịch vụ sửa chữa ô tô."
-        />
-      </Head>
+      <Seo
+        title="Liên Hệ"
+        description="Liên hệ Ô Tô Gia Khánh - Hotline 0973 874 677. Địa chỉ: Lô 5-6, Đường số 1, Quốc lộ 1D, Phường Quy Nhơn Nam, Tỉnh Gia Lai. Cứu hộ 24/7, tư vấn miễn phí."
+        url="/lien-he"
+        keywords="liên hệ Ô Tô Gia Khánh, hotline gara ô tô, địa chỉ gara Gia Lai, cứu hộ ô tô, tư vấn sửa chữa ô tô"
+      />
 
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         {/* Tiêu đề trang */}

@@ -1,5 +1,5 @@
 // pages/dich-vu.tsx
-import Head from "next/head"
+import Seo from "@/components/seo/Seo"
 import {
   Wrench,
   ShieldCheck,
@@ -174,13 +174,12 @@ export const services = [
 export default function ServicesPage() {
   return (
     <>
-      <Head>
-        <title>Dịch Vụ Sửa Chữa & Bảo Dưỡng Ô Tô | Ô Tô Gia Khánh</title>
-        <meta
-          name="description"
-          content="Danh sách dịch vụ sửa chữa, bảo dưỡng, độ xe và chăm sóc ô tô tại Ô Tô Gia Khánh."
-        />
-      </Head>
+      <Seo
+        title="Dịch Vụ Sửa Chữa & Bảo Dưỡng Ô Tô"
+        description="Danh sách đầy đủ dịch vụ sửa chữa, bảo dưỡng, độ xe và chăm sóc ô tô tại Ô Tô Gia Khánh: đồng sơn, điện máy, bảo dưỡng định kỳ, cứu hộ 24/7, làm bảo hiểm, kiểm tra xe trước khi mua."
+        url="/dich-vu-sua-chua"
+        keywords="dịch vụ sửa chữa ô tô, bảo dưỡng ô tô, đồng sơn ô tô, sửa điện điều hòa, cứu hộ ô tô, làm bảo hiểm ô tô, độ xe, kiểm tra xe cũ"
+      />
 
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-14">
         {/* Header page */}

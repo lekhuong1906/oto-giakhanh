@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Seo from "@/components/seo/Seo";
 import HeroSection from "../../components/about/HeroSection";
 import StatsSection from "../../components/about/StatsSection";
 import AboutSection from "../../components/about/AboutSection";
@@ -122,13 +122,13 @@ export default function AboutPage() {
     {
       icon: <PhoneCall className="w-4 h-4 text-yellow-400" />,
       label: "Hotline",
-      content: "09xx xxx xxx",
+      content: "0973 874 677",
       subContent: "Có hỗ trợ ngoài giờ và cứu hộ 24/7 tùy khu vực.",
     },
     {
       icon: <MapPin className="w-4 h-4 text-yellow-400" />,
       label: "Địa chỉ gara",
-      content: "[Điền địa chỉ gara của bạn tại đây để khách dễ tìm]",
+      content: "Lô 5-6, Đường số 1, Quốc lộ 1D, Phường Quy Nhơn Nam, Tỉnh Gia Lai",
     },
     {
       icon: <Clock className="w-4 h-4 text-yellow-400" />,
@@ -139,21 +139,12 @@ export default function AboutPage() {
 
   return (
     <>
-      <Head>
-        <title>Giới thiệu | Ô Tô Gia Khánh</title>
-        <meta
-          name="description"
-          content="Công ty TNHH Ô Tô Gia Khánh – Gara sửa chữa, bảo dưỡng, đồng sơn, điện máy, làm bảo hiểm và cứu hộ ô tô uy tín."
-        />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:title" content="Giới thiệu | Ô Tô Gia Khánh" />
-        <meta
-          property="og:description"
-          content="Ô Tô Gia Khánh – đơn vị chuyên đồng sơn, điện – điều hòa, máy – gầm, bảo dưỡng, cứu hộ, làm bảo hiểm ô tô uy tín."
-        />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="website" />
-      </Head>
+      <Seo
+        title="Giới thiệu"
+        description="Công ty TNHH Ô Tô Gia Khánh – Gara sửa chữa, bảo dưỡng, đồng sơn, điện máy, làm bảo hiểm và cứu hộ ô tô uy tín tại Gia Lai. Top 10 gara uy tín với nhiều năm kinh nghiệm."
+        url="/ve-chung-toi"
+        keywords="giới thiệu Ô Tô Gia Khánh, gara ô tô Gia Lai, công ty sửa chữa ô tô, đồng sơn ô tô, cứu hộ 24/7, bảo hiểm ô tô"
+      />
 
       <main className="bg-gray-50">
         <HeroSection pageUrl={pageUrl} />
@@ -174,7 +165,7 @@ export default function AboutPage() {
           serviceFields={serviceFields}
         />
 
-        <CoreValuesSection title="Giá trị cốt lõi" values={coreValues} />
+        {/* <CoreValuesSection title="Giá trị cốt lõi" values={coreValues} /> */}
 
         <ProcessScenariosSection
           scenariosTitle="Khi nào nên tìm đến Gia Khánh?"
