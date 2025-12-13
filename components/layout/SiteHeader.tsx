@@ -11,7 +11,7 @@ export default function SiteHeader() {
     <header className="border-b bg-white/80 backdrop-blur">
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
         {/* Logo / Brand */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 order-1 md:order-0">
           <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-700 text-white">
             <Car className="h-5 w-5" />
           </div>
@@ -29,7 +29,7 @@ export default function SiteHeader() {
         <Button
           variant="ghost"
           size="sm"
-          className="md:hidden"
+          className="md:hidden order-3 md:order-0"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <Menu className="h-5 w-5" />
@@ -65,7 +65,7 @@ export default function SiteHeader() {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 order-2 md:order-0">
           <a
             href="tel:0973874677"
             className="hidden sm:flex items-center gap-1 text-xs md:text-sm text-gray-700"

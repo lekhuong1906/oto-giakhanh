@@ -1,13 +1,69 @@
 // pages/index.tsx
 import Head from "next/head"
-import { Button } from "@/components/ui/button"
 import SerViceSlideShow from "@/components/home/ServicesSlideShow"
 import ActivityCarousel from "@/components/home/ActivityCarousel"
-import { Wrench } from "lucide-react"
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection"
 import ProcessSection from "@/components/home/ProcessSection"
+import CustomerReviewsSection from "@/components/home/CustomerReviewsSection"
+import HeroSection from "@/components/home/HeroSection"
 
 export default function HomePage() {
+  const customerReviews = [
+    {
+      name: "Anh Minh",
+      rating: 5,
+      comment: "Dịch vụ rất chuyên nghiệp, kỹ thuật viên tận tình. Xe mình bị va quẹt nặng nhưng sửa xong như mới. Giá cả hợp lý, minh bạch.",
+      date: "15/11/2024",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    },
+    {
+      name: "Chị Lan",
+      rating: 5,
+      comment: "Gia Khánh cứu hộ kịp thời khi xe mình chết máy giữa đường. Cứu hộ 24/7 đúng như quảng cáo. Rất đáng tin cậy!",
+      date: "22/11/2024",
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+    },
+    {
+      name: "Anh Tuấn",
+      rating: 4,
+      comment: "Làm bảo hiểm rất hỗ trợ, không thu tiền vụ. Tư vấn rõ ràng, xử lý nhanh chóng. Chỉ có điều chờ hơi lâu nhưng chất lượng tốt.",
+      date: "08/12/2024",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    },
+    {
+      name: "Anh Huy",
+      rating: 5,
+      comment: "Đồng sơn rất đẹp, màu xe như mới. Kỹ thuật viên có tâm, giải thích từng bước làm. Rất hài lòng!",
+      date: "01/12/2024",
+    },
+    {
+      name: "Chị Mai",
+      rating: 5,
+      comment: "Sửa chữa máy gầm, điện điều hòa rất chuyên nghiệp. Báo giá trước, không phát sinh. Uy tín!",
+      date: "18/11/2024",
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
+    },
+    {
+      name: "Anh Sơn",
+      rating: 4,
+      comment: "Cứu hộ nhanh, hỗ trợ tận tình. Xe ngập nước nhưng được xử lý kịp thời. Cảm ơn Gia Khánh!",
+      date: "25/11/2024",
+    },
+    {
+      name: "Chị Linh",
+      rating: 5,
+      comment: "Làm đẹp xe, phủ ceramic rất chất lượng. Tư vấn nhiệt tình, giá hợp lý. Sẽ quay lại!",
+      date: "10/12/2024",
+      avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
+    },
+    {
+      name: "Anh Đức",
+      rating: 5,
+      comment: "Bảo hiểm vật chất, hỗ trợ hồ sơ đầy đủ. Không thu tiền vụ, đúng như cam kết. Tốt!",
+      date: "05/12/2024",
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -18,50 +74,12 @@ export default function HomePage() {
         />
       </Head>
 
-      {/* Hero */}
-      <section className="w-full bg-yellow-500 text-white">
-        <div className="max-w-6xl mx-auto px-4 py-16 md:py-20 grid gap-8 md:grid-cols-2 items-center">
-          <div>
-            <p className="text-xs uppercase tracking-wide text-red-700 mb-2">
-              Phụ tùng & Dịch vụ ô tô
-            </p>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              
-            </h1>Giải pháp toàn diện cho chiếc xe của bạn
-            <p className="text-sm md:text-base text-gray-200 mb-6">
-              Phụ tùng chính hãng, giá tốt – Dịch vụ sửa chữa chuyên nghiệp, bảo
-              hành rõ ràng. Đặt lịch online tiện lợi.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-red-700 hover:bg-red-800">
-                <a href="/lien-he">
-                  <Wrench className="h-4 w-4 mr-2" />
-                  Đặt lịch sửa chữa
-                </a>
-              </Button>
-              {/* <Button asChild variant="outline" size="lg" className="border-gray-500 text-white">
-                <a href="/san-pham">Xem phụ tùng</a>
-              </Button> */}
-            </div>
-          </div>
-
-          <div>
-            <div className="h-48 md:h-64 rounded-2xl bg-gradient-to-br from-red-600 via-yellow-600 to-yellow-900 shadow-xl flex items-center justify-center">
-              <span className="text-gray-100 text-sm">
-                (Khu vực hình ảnh garage / xe ô tô)
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-       {/* <ServicesSlider /> */}
-       <WhyChooseUsSection />
-       <SerViceSlideShow />
-       <ProcessSection />
-       <ActivityCarousel />
-
-      {/* Các section khác: Danh mục, Sản phẩm, Dịch vụ... có thể dùng lại từ bản trước */}
+      <HeroSection />
+      <WhyChooseUsSection />
+      <SerViceSlideShow />
+      <ProcessSection />
+      <CustomerReviewsSection reviews={customerReviews} />
+      <ActivityCarousel />
     </>
   )
 }
