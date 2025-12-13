@@ -1,14 +1,14 @@
 import Seo from "@/components/seo/Seo";
-import HeroSection from "../../components/about/HeroSection";
-import StatsSection from "../../components/about/StatsSection";
-import AboutSection from "../../components/about/AboutSection";
-import CoreValuesSection from "../../components/about/CoreValuesSection";
-import ProcessScenariosSection from "../../components/about/ProcessScenariosSection";
-import ContactSection from "../../components/about/ContactSection";
+import HeroSection from "@/components/about/HeroSection";
+import StatsSection from "@/components/about/StatsSection";
+import AboutSection from "@/components/about/AboutSection";
+// import CoreValuesSection from "@/components/about/CoreValuesSection";
+import ProcessScenariosSection from "@/components/about/ProcessScenariosSection";
+import ContactSection from "@/components/about/ContactSection";
 import { Wrench, ShieldCheck, Droplets, LifeBuoy, PhoneCall, MapPin, Clock } from "lucide-react";
 
 export default function AboutPage() {
-  const pageUrl = "https://oto-giakhanh.vercel.app/gioi-thieu";
+  const pageUrl = "https://oto-giakhanh.vercel.app/ve-chung-toi";
 
   const stats = [
     {
@@ -54,26 +54,26 @@ export default function AboutPage() {
     },
   ];
 
-  const coreValues = [
-    {
-      title: "Minh bạch",
-      subtitle: "Báo đúng, làm đúng, giải thích rõ.",
-      description:
-        "Mọi hạng mục đều được giải thích và thống nhất trước khi làm. Không tự ý phát sinh chi phí khiến khách khó chịu.",
-    },
-    {
-      title: "Tận tâm",
-      subtitle: "Xử lý như xe của chính mình.",
-      description:
-        "Dù là va quẹt nhỏ hay tai nạn nặng, chúng tôi đều cố gắng xử lý chỉn chu và hỗ trợ khách đến cùng.",
-    },
-    {
-      title: "Đồng hành",
-      subtitle: "Không chỉ sửa – mà còn tư vấn lâu dài.",
-      description:
-        "Hướng dẫn cách sử dụng, bảo dưỡng để xe bền, tiết kiệm và hạn chế hư hỏng về sau.",
-    },
-  ];
+  // const coreValues = [
+  //   {
+  //     title: "Minh bạch",
+  //     subtitle: "Báo đúng, làm đúng, giải thích rõ.",
+  //     description:
+  //       "Mọi hạng mục đều được giải thích và thống nhất trước khi làm. Không tự ý phát sinh chi phí khiến khách khó chịu.",
+  //   },
+  //   {
+  //     title: "Tận tâm",
+  //     subtitle: "Xử lý như xe của chính mình.",
+  //     description:
+  //       "Dù là va quẹt nhỏ hay tai nạn nặng, chúng tôi đều cố gắng xử lý chỉn chu và hỗ trợ khách đến cùng.",
+  //   },
+  //   {
+  //     title: "Đồng hành",
+  //     subtitle: "Không chỉ sửa – mà còn tư vấn lâu dài.",
+  //     description:
+  //       "Hướng dẫn cách sử dụng, bảo dưỡng để xe bền, tiết kiệm và hạn chế hư hỏng về sau.",
+  //   },
+  // ];
 
   const scenarios = [
     {
