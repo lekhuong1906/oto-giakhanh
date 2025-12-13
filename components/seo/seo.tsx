@@ -1,7 +1,7 @@
 // components/seo/Seo.tsx
 import Head from "next/head"
 
-type SeoProps = {
+export type SeoProps = {
   title?: string
   description?: string
   url?: string
