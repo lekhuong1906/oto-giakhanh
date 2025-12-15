@@ -1,5 +1,5 @@
 // pages/index.tsx
-import Seo from "@/components/SEO/Seo"
+import Seo from "@/components/meta/Seo"
 import SerViceSlideShow from "@/components/home/ServicesSlideShow"
 import ActivityCarousel from "@/components/home/ActivityCarousel"
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection"

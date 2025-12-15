@@ -1,5 +1,5 @@
 // pages/lien-he.tsx
-import Seo from "@/components/SEO/Seo"
+import Seo from "@/components/meta/Seo"
 import { Phone, Mail, MapPin, Clock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 

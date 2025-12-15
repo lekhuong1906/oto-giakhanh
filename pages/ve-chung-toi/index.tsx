@@ -1,4 +1,4 @@
-import Seo from "@/components/SEO/Seo";
+import Seo from "@/components/meta/Seo";
 import HeroSection from "@/components/about/HeroSection";
 import StatsSection from "@/components/about/StatsSection";
 import AboutSection from "@/components/about/AboutSection";
