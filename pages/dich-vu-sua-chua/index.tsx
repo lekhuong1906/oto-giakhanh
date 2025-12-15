@@ -1,5 +1,5 @@
 // pages/dich-vu.tsx
-import Seo from "../../components/seo/Seo"
+import Seo from "@/components/SEO/Seo"
 import {
   Wrench,
   ShieldCheck,
@@ -218,7 +218,7 @@ export default function ServicesPage() {
                 className="border rounded-2xl p-5 md:p-6 shadow-sm bg-white hover:shadow-md transition-shadow"
               >
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center flex-shrink-0">
+                  <div className="h-9 w-9 rounded-full bg-red-700 text-white flex items-center justify-center shrink-0">
                     <Icon className="h-4 w-4" />
                   </div>
                   <div>
@@ -234,7 +234,7 @@ export default function ServicesPage() {
                 <ul className="text-xs md:text-sm text-gray-700 space-y-1.5 mb-4">
                   {service.details.map((item, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-red-700 flex-shrink-0" />
+                      <span className="mt-[7px] h-1.5 w-1.5 rounded-full bg-red-700 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
