@@ -1,7 +1,7 @@
 // components/layout/site-header.tsx
 import Link from "next/link"
 import { useState } from "react"
-import { Phone, ShoppingCart, Car, Menu } from "lucide-react"
+import { Phone, Car, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function SiteHeader() {

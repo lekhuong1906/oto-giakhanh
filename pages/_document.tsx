@@ -14,11 +14,19 @@ export default function Document() {
                 />
 
                 {/* Favicon - Multiple formats for better compatibility with Google */}
+                {/* Favicon.ico - Traditional format for maximum compatibility */}
+                <link
+                    rel="icon"
+                    href="/favicon.ico"
+                    sizes="any"
+                />
+                {/* SVG favicon - Modern and scalable */}
                 <link
                     rel="icon"
                     href="/icon.svg"
                     type="image/svg+xml"
                 />
+                {/* PNG favicons for different sizes */}
                 <link
                     rel="icon"
                     href="/icon.svg"
@@ -39,7 +47,7 @@ export default function Document() {
                 />
                 <link
                     rel="shortcut icon"
-                    href="/icon.svg"
+                    href="/favicon.ico"
                 />
                 <link
                     rel="apple-touch-icon"
@@ -49,11 +57,18 @@ export default function Document() {
                 {/* Site verification and branding */}
                 <meta name="application-name" content="Ô Tô Gia Khánh" />
                 <meta name="msapplication-TileColor" content="#EAB308" />
+                <meta name="msapplication-TileImage" content="/icon.svg" />
+                {/* Site name for search engines */}
+                <meta name="author" content="Ô Tô Gia Khánh" />
+                <meta name="publisher" content="Ô Tô Gia Khánh" />
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:site_name" content="Ô Tô Gia Khánh" />
+                <meta property="og:locale" content="vi_VN" />
                 {/* Twitter */}
                 <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:site" content="@otogiakhanh" />
+                <meta name="twitter:creator" content="@otogiakhanh" />
 
                 {/* Default SEO (có thể override bằng từng page) */}
                 <meta

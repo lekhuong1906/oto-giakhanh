@@ -38,6 +38,10 @@ export default function Seo({
       <meta name="description" content={metaDescription} />
       <meta name="keywords" content={metaKeywords} />
       
+      {/* Site branding */}
+      <meta name="author" content="Ô Tô Gia Khánh" />
+      <meta name="publisher" content="Ô Tô Gia Khánh" />
+      
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 
       {/* Canonical */}
@@ -57,6 +61,53 @@ export default function Seo({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:site" content="@otogiakhanh" />
+
+      {/* Structured Data - JSON-LD for better Google recognition */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Ô Tô Gia Khánh",
+            "alternateName": "Công Ty TNHH Ô Tô Gia Khánh",
+            "url": BASE_URL,
+            "logo": `${BASE_URL}/icon.svg`,
+            "description": "Chuyên phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa, bảo dưỡng uy tín tại Gia Lai.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Gia Lai",
+              "addressCountry": "VN"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+84-973-874-677",
+              "contactType": "customer service"
+            },
+            "sameAs": []
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Ô Tô Gia Khánh",
+            "url": BASE_URL,
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": `${BASE_URL}/search?q={search_term_string}`
+              },
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
     </Head>
   )
 }
