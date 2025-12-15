@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Seo from "@/components/seo";
+import Seo from "../../components/seo/Seo";
 import Link from "next/link";
 import { services, getServiceBySlug, Service } from "@/data/services";
 import { iconMap } from "@/data/icons";
