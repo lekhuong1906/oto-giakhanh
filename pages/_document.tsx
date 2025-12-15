@@ -77,7 +77,7 @@ export default function Document() {
                 />
                 <meta
                     name="keywords"
-                    content="phu tung o to, phu kien o to, gara o to, sua chua o to, bao duong o to, do xe, do noi that"
+                    content="phu tung o to, phu kien o to, gara o to, sua chua o to, bao duong o to, do xe, do noi that, Top 10 gara uy tin o Gia Lai, Top 10 gara uy tin o Quy Nhon, Top 10 gara uy tin o Binh Dinh"
                 />
                 <meta name="theme-color" content="#111827" />
                 {/** Google search console */}
