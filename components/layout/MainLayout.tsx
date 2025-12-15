@@ -7,6 +7,7 @@ interface MainLayoutProps {
 
 import SiteHeader from "./SiteHeader"
 import SiteFooter from "./SiteFooter"
+import FloatingChatButtons from "./FloatingChatButtons"
 
 export default function MainLayout({ children } : MainLayoutProps) {
   return (
@@ -14,6 +15,7 @@ export default function MainLayout({ children } : MainLayoutProps) {
       <SiteHeader />
       <main className="flex-1">{children}</main>
       <SiteFooter />
+      <FloatingChatButtons />
     </div>
   )
 }
