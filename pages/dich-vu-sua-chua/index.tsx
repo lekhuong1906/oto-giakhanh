@@ -1,5 +1,5 @@
 // pages/dich-vu.tsx
-import Seo from "@/components/seo/Seo"
+import Seo from "@/components/seo"
 import {
   Wrench,
   ShieldCheck,
