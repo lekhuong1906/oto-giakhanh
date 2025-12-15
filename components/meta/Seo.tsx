@@ -13,7 +13,7 @@ type SeoProps = {
 const DEFAULT_TITLE = "Công Ty TNHH Ô Tô Gia Khánh - Phụ tùng & Dịch vụ ô tô"
 const DEFAULT_DESCRIPTION =
   "Chuyên phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa, bảo dưỡng uy tín tại Gia Lai."
-const DEFAULT_KEYWORDS = "phụ tùng ô tô, phụ kiện ô tô, gara ô tô, sửa chữa ô tô, bảo dưỡng ô tô, đồng sơn ô tô, cứu hộ ô tô, bảo hiểm ô tô, Gia Lai, Top 10 gara uy tín ở Gia Lai, Top 10 gara uy tín ở Quy Nhơn, Top 10 gara uy tín ở Bình Định"
+const DEFAULT_KEYWORDS = "phụ tùng ô tô, phụ kiện ô tô, gara ô tô uy tín, sửa chữa ô tô, bảo dưỡng ô tô, đồng sơn ô tô, cứu hộ ô tô, bảo hiểm ô tô, Top 10 gara uy tín Gia Lai, Top 10 gara uy tín Quy Nhơn, Top 10 gara uy tín Bình Định"
 const DEFAULT_OG_IMAGE = "https://oto-giakhanh.vercel.app/images/banner_logo.webp"
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://oto-giakhanh.vercel.app"
 

@@ -70,7 +70,7 @@ export default function HomePage() {
         title="Phụ Tùng & Dịch Vụ Ô Tô"
         description="Phụ tùng, phụ kiện ô tô chính hãng và dịch vụ sửa chữa uy tín tại Gia Lai. Top 10 gara uy tín - Chuyên ĐỒNG - SƠN - ĐIỆN - MÁY. Nhận bảo dưỡng, cứu hộ 24/7, làm bảo hiểm không thu tiền vụ."
         url="/"
-        keywords="phụ tùng ô tô Gia Lai, gara ô tô uy tín, sửa chữa ô tô, đồng sơn ô tô, cứu hộ ô tô 24/7, bảo hiểm ô tô, bảo dưỡng ô tô, Top 10 gara uy tín ở Gia Lai, Top 10 gara uy tín ở Quy Nhơn, Top 10 gara uy tín ở Bình Định"
+        keywords="phụ tùng ô tô Gia Lai, gara ô tô uy tín, sửa chữa ô tô, đồng sơn ô tô, cứu hộ ô tô 24/7, bảo hiểm ô tô, bảo dưỡng ô tô, Top 10 gara uy tín Gia Lai, Top 10 gara uy tín Quy Nhơn, Top 10 gara uy tín Bình Định"
       />
 
       <HeroSection />
