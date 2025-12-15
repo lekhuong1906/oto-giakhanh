@@ -1,4 +1,3 @@
-// components/seo/Seo.tsx
 import Head from "next/head"
 
 export type SeoProps = {

@@ -1,5 +1,3 @@
-// pages/dich-vu-sua-chua/[slug].tsx
-
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Seo from "@/components/seo/Seo";
 import Link from "next/link";
